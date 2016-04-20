@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<title>智能社 - www.zhinengshe.com</title>
+<style>
+body{background:#000;}
+#c1{background:#fff;}
+</style>
+<script>
+function d2a(n){
+	return n*Math.PI/180;
+}
+
+window.onload = function(){
+	var oC = document.getElementById("c1"); 
+	var gd = oC.getContext("2d");
+	
+	var cx = 300;
+	var cy = 200;
+	var r  = 150;
+
+
+	setInterval(function(){
+		gd.clearRect(0,0,oC.width,oC.height);
+		
+		var oDate = new Date();
+		var iH = oDate.getHours();//30
+		var iM = fillZero(oDate.getMinutes());//6
+		var iS = fillZero(oDate.getSeconds());//6
+		var iMs = oDate.getMilliseconds();		
+		
+		
+		drawArc(gd,cx,cy,r,0,(iH%12)*30 + iM/60*30,"#f40");
+		drawArc(gd,cx,cy,r+20,0,iM*6 + iS/60*6,"#4f0");
+		drawArc(gd,cx,cy,r+40,0,iS*6 + iMs/1000*6,"#f04");
+		
+		
+		var str = [iH,iM,iS].join(":");
+		var h = 40;
+		gd.font = "bold " + h+"px kaiti";
+		var w = gd.measureText(str).width;
+		gd.fillText(str,cx-w/2,cy+h/2);
+		
+	},16);
+	
+	
+	function drawArc(gd,cx,cy,r,s,e,color){
+		s -= 90;
+		e -= 90;
+		
+		gd.lineWidth = 20;
+		gd.strokeStyle = color; 
+		gd.beginPath();
+		gd.arc(cx,cy,r,d2a(s),d2a(e),false);
+		gd.stroke();
+
+	}
+	
+	function fillZero(n){return n<10?'0'+n:''+n;}
+	
+	
+};
+</script>
+</head>
+
+<body>
+<canvas id="c1" width="800" height="500"></canvas>
+
+</body>
+</html>

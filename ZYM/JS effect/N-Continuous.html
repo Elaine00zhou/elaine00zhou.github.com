@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<title>智能社 - www.zhinengshe.com</title>
+<style>
+body{background:#000;}
+#c1{background:#fff;}
+</style>
+<script>
+function d2a(n){
+	return n*Math.PI/180;
+}
+window.onload = function(){
+	var oC = document.getElementById("c1");
+	var gd = oC.getContext("2d");
+	gd.strokeStyle = "red";
+	
+	var d = 0;
+	setInterval(function(){
+		gd.save();
+		drawRect(gd,300,150,300,200,d++);
+		gd.restore();
+	},30);
+	
+	
+	
+	function drawRect(gd,x,y,w,h,d){
+		
+		//2 移动画布到物体中心
+		gd.translate(x + w/2,y +　h/2);
+		
+		//3 旋转
+		gd.rotate(d2a(d));
+		
+		//1 移动中心点
+		gd.strokeRect(-w/2,-h/2,w,h);
+	}
+	
+	
+	//连拍
+	var oBtn = document.getElementById("btn1");  
+	oBtn.onclick = function(){
+		var oImg = new Image();
+		var src = oC.toDataURL();
+		//alert(src);
+		
+		oImg.src = src;	
+		document.body.appendChild(oImg);
+	};
+};
+</script>
+</head>
+
+<body>
+
+<input id="btn1" type="button" value="N连拍" /> 
+<canvas id="c1" width="800" height="500"></canvas>
+</body>
+</html>

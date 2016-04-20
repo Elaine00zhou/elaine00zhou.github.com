@@ -1,0 +1,21 @@
+body{background:#282828;color:#8c8c8c;font:12px/18px Arial, Helvetica, sans-serif;}
+body,form,ul,ol,li,p,dl,dt,dd,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6,input,textarea{font-size:12px;}
+li{list-style:none;}
+input,textarea{vertical-align:middle;}
+img{border:0;vertical-align:bottom;}
+em{font-style:normal;}
+html{height: 100%;overflow-y: auto;overflow-x: hidden;}
+
+/* common */
+a{ outline:none;blr:expression(this.onFocus=this.blur());}
+.pointer{cursor:pointer;}
+
+/* clear float */
+.cfix:after,.cf:after{content:".";display:block;visibility:hidden;height:0;clear:both;}
+.cfix,.cf{zoom:1}
+.cfixBoth{clear:both;height:1px;overflow:hidden;}
+
+/* a */
+a{text-decoration:none;color:#ccc;}
+a:hover{color:#e73d39;}

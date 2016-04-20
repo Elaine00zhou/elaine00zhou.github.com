@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{padding:0;margin:0}
+a{text-decoration:none;}
+li{list-style:none;}
+textarea{resize:none;}
+img,input,select,textarea{vertical-align:top;}
+input,select,textarea{outline:none;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.clearFix:after{content:"";display:block;clear:both;}
+.clearFix{zoom:1;}
+
+
+.box{width:1010px;margin:0 auto;font-family:黑体;background:#40d6e4;}
+.wrapper{width:980px;color:#333;margin:0 auto;}

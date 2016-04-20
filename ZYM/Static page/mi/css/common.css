@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0; }
+li{ list-style:none; }
+a{ text-decoration:none; }
+img{ display:block; }
+.fl{ float:left; }
+.fr{ float:right; }
+.clearFix:after{ content:''; display:block; clear:both; }
+
+
+body{ background:#fff; color:#333; font-size:12px; }
+a{ color:#333; }
+.wrapper{ width:1226px; margin:0 auto; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

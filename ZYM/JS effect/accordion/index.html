@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>accordion</title>
+<style>
+* {margin:0; padding:0; list-style:none;}
+body{background:#ccc;}
+#div1 {width:940px; height:305px; border:1px solid black; margin:80px auto; position:relative; overflow:hidden;}
+#div1 img{width:840px;height:305px;}
+#div1 span {width:20px; height:305px; display:block; position:absolute; left:0; top:0;}
+#div1 div {width:840px; height:305; position:absolute; left:0; top:0; background:#CCC;}
+
+a{font-size:24px;color:rgba(0,0,0,0); text-shadow:0 0 50px #fff; opacity:0; transition:0.3s all ease;}
+a.active{ opacity:1;text-shadow:0 0 0 #C06;text-align:center;}
+
+</style>
+<script src="move9.js"></script>
+<script>
+window.onload=function(){
+	var oDiv=document.getElementById('div1');
+	var aDiv=oDiv.children;
+	for(var i=1;i<aDiv.length;i++){
+		aDiv[i].style.left=aDiv[i].offsetWidth+20*(i-1)+'px';
+			
+	}
+	//onmouseover,遍历所有div,拿i和this.index,<=this.index的←
+	for(var i=0;i<aDiv.length;i++){
+		(function(index){
+			aDiv[i].onmouseover=function(){
+				for(var i=0;i<aDiv.length;i++){
+					if(i<=index){
+						//←	
+						//aDiv[i].style.left=i*20+'px';
+						move(aDiv[i],{left:i*20},{time:1000});
+					}else{
+						//→	
+						//aDiv[i].style.left=aDiv[i].offsetWidth+20*(i-1)+'px';
+						move(aDiv[i],{left:aDiv[i].offsetWidth+20*(i-1)},{time:1000});
+					}
+				}
+			};	
+		})(i);
+	}
+		
+		
+	var str = "我想用生活的乐章谱曲，以与你一起的时光为弦音，待你我步履蹒跚之时，我用这独特的手风琴为你弹奏这乐曲!!!!";
+	
+	for(var i = 0; i < str.length; i++){
+		var oA = document.createElement("a");
+		oA.innerHTML = str[i];
+		document.body.appendChild(oA);
+	}
+	
+	var i = 0;
+	var aA = document.body.children;
+	var timer = setInterval(function(){
+		
+		aA[i].className = "active";
+		
+		i++;
+		if(i == str.length){
+			clearInterval(timer);
+		}	
+	},200);
+};
+</script>
+</head>
+
+<body>
+<!--<p>我想用生活的乐章谱曲，以与你一起的时光为弦音，待你我步履蹒跚之时，我用这独特的手风琴为你弹奏这乐曲。</p>
+-->
+<div id="div1">
+	<div class="active"><img src="images/0.jpg" /><span style="background:#C00;">仰望麋鹿</span></div>
+	<div><img src="images/1.jpg" /><span style="background:#0fc;">海角天涯</span></div>
+	<div><img src="images/2.jpg" /><span style="background:#af0;">爱宠之欢</span></div>
+	<div><img src="images/3.jpg" /><span style="background:#c0f;">松鼠果子</span></div>
+	<div><img src="images/4.jpg" /><span style="background:#e0f;">悠闲时光</span></div>
+	<div><img src="images/5.jpg" /><span style="background:#a90;">临水观林</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,762 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0; }
+a{ text-decoration:none; }
+li{ list-style:none; }
+img{ display:block; }
+.fl{ float:left; }
+.fr{ float:right; }
+.clearFix:after{ content:''; display:block; clear:both; }
+body{font-size:12px;font-family:微软雅黑;}
+a{color:#333;}
+/*top*/
+.top{ height:30px; border-bottom:1px solid #eee; }
+.wrapper{ width:1200px; margin:0 auto; }
+.top ul{ overflow:hidden; margin-top:5px; }
+.top li{ float:left; padding:0 16px; border-left:1px dotted #ccc; height:20px; line-height:20px; margin-left:-1px; }
+.top i{ background:url(weixin.png) no-repeat; width:16px; height:16px; margin-top:2px; margin-right:6px; }
+.top .qq{ background:url(weixin.png) no-repeat; }
+.top em{ width:20px; height:14px; line-height:14px; background:#f69; margin-top:3px; text-align:center; color:#fff; font-style:normal; margin-left:3px; }
+
+/*logo*/
+.wrapper{ width:1200px; margin:0 auto; }
+h3{width:117px;height:43px;background:url(logo.png) no-repeat;text-indent:-10000px;margin-top:40px;}
+.text{width:144px;height:20px;background:url(logo_text.png) no-repeat;margin-left:15px;margin-top:54px;}
+.search{margin-top:21px;margin-left:84px;}
+.app{background:url(app_bg.png) no-repeat;width:143px;height:45px;margin-top:39px;}
+
+/*nav*/
+.wrapper{ width:1200px; margin:0 auto; }
+.nav{ margin-top:60px; border-bottom:2px solid #f69; padding-bottom:17px; }
+.nav ul{ margin-left:22px; }
+.nav li{ float:left; font-size:14px; margin-right:44px; }
+.nav a{ color:#333; }
+.nav .active{ color:#f69; }
+
+/*sidebar banner*/
+.wrapper{ width:1200px; margin:0 auto; }
+.sidebar{ width:238px; border:1px solid #ccc; height:572px; line-height:100%; overflow:hidden; }
+.sidebar li{ height:100px; border-bottom:1px dotted #ccc; margin:0 20px; margin-bottom:-1px; padding-top:15px; }
+.sidebar li div{ overflow:hidden; line-height:24px; margin-top:6px; }
+.sidebar a{ margin-right:14px; float:left; }
+
+.banner-t{width:960px;height:420px;position:relative;}
+.prve,.next{width:34px;height:44px;background:url(bnr_btn_left1.png) no-repeat;top:50%;margin-top:-22px;position:absolute;}
+.next{background:url(bnr_btn_right1.png) no-repeat;right:0;}
+.btn{ position:absolute; left:50%; margin-left:-27px; bottom:20px;}
+.btn span{ width:10px; height:10px; background:#fff; float:left; margin-right:5px; border-radius:50%;}
+
+.banner-b img{width:182px;height:145px; margin-left:10px;}
+.banner-b{margin-top:9px;}
+
+/*picture nav*/
+.wrapper{ width:1200px; margin:0 auto; }
+.line-t{margin-top:45px;}
+.line-t h1{font-size:20px;font-weight:bold;margin-left:10px;color:#666;}
+.line-t span{font-size:12px;color:#999;}
+
+/*picture*/
+.wrapper{ width:1200px; margin:0 auto; }
+.picture{width:387px;height:375px;margin:20px 12px 47px 0;}
+.big-p{width:260px;height:375px;margin-right:1px;}
+.picture-r{width:125px;}
+.picture-r img{width:125px;height:124px;margin-bottom:1px;}
+
+/* smart-picture*/
+.wrapper{ width:1200px; margin:0 auto; }
+.smart-box{width:225px;height:400px;margin-right:12px;margin-top:20px}
+.smart-box img{width:225px;height:340px;margin-bottom:18px;}
+.smart-box .money{color:#ffa3bf;}
+.smart-box span{color:#9a9a9a;}
+.smart-box .word{padding-top:10px;color:#666;}
+
+.litte{width:386px;height:370px;margin-right:12px;}
+.litte img{width:386px;height:258px;margin-bottom:20px;}
+.litte div{color:#ffa3bf;}
+.litte p{color:#9a9a9a;text-decoration:line-through;}
+.litte span{display:block;font-size:12px;color:#666;padding:10px 0;}
+.litte i{display:block;font-style:normal;font-size:12px;color:#333;}
+.litte b{display:block;font-weight:normal;font-size:12px;color:#909;padding-top:7px;}
+
+/*another nav*/
+.wrapper{ width:1200px; margin:0 auto; }
+
+.another-nav ul{ margin-left:340px; }
+.another-nav li{ float:left; font-size:20px; margin-right:44px; }
+.another-nav a{ color:#333; }
+.another-nav .active{ color:#f69; }
+
+/*footer*/
+.wrapper{ width:1200px; margin:0 auto; }
+.footer{width:1200px;height:316px;border:1px solid #CCC;font-size:12px;color:#8a8a8a;background:#CCC;}
+.one img{margin-right:13px;}
+.one{margin-top:35px;}
+.two{margin-left:50px;line-height:24px;}
+.two .h2{font-size:16px;color:#333;font-weight:bold;}
+
+.footer-c{display:block;width:1200px;height:30px;border-top:1px solid #ddd;margin-top:180px;border-bottom:1px solid #ddd;margin-bottom:10px;}
+.footer-c li{line-height:30px;margin-right:8px;color:#666;}
+.footer-b p{font-size:12px;color:#666;line-height:25px;}
+</style>
+</head>
+
+<body>
+<!--top-->
+	<div class="top clearFix">
+    	<div class="wrapper">
+        	<ul class="fr clearFix">
+            	<li>
+                    <a class="clearFix" href="">
+                    	<i class="weixin fl"></i>
+                        <span class="fl">登陆</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="clearFix" href="">
+                    	<i class="qq fl"></i>
+                        <span class="fl">登陆</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="clearFix" href="">
+                    	<i class="fl"></i>
+                        <span class="fl">购物车</span>
+                        <em class="fl">0</em>
+                    </a>
+                </li>
+                <li>
+                    <a class="clearFix" href="">
+                        <span class="fl">注册</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+ <!--logo--> 
+ 	<div class="wrapper clearFix">
+    	<h3 class="fl">美丽说</h3>
+        <div class="text fl" ></div>
+        <div class="search fl" >
+        	<img src="search.jpg"/>
+        </div>
+        <div class="app fr" ></div>
+
+    </div>  
+    
+ <!--nav-->
+	<div class="nav">
+    	<div class="wrapper">
+        	<ul class="clearFix">
+            	<li>
+                	<a class="active" href="">首页</a>
+                </li>
+                <li>
+                	<a href="">首页</a>
+                </li>
+                <li>
+                	<a href="">首页</a>
+                </li>
+                <li>
+                	<a href="">首页</a>
+                </li>
+                <li>
+                	<a href="">首页</a>
+                </li>
+                <li>
+                	<a href="">首页</a>
+                </li>
+                <li>
+                	<a href="">首页</a>
+                </li>
+                <li>
+                	<a href="">首页</a>
+                </li>
+                <li>
+                	<a href="">首页</a>
+                </li>
+                <li>
+                	<a href="">首页</a>
+                </li>
+                <li>
+                	<a href="">首页</a>
+                </li>
+                <li>
+                	<a href="">首页</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    
+<!--sidebar banner-->
+	<div class="wrapper">
+    	<div class="sidebanner clearFix">
+        	<div class="sidebar fl">
+            	<ul>
+                	<li>
+                    	<h4 >日日上新</h4>
+                        <div>
+                        	<a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                            <a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                            <a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                            <a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                        </div>
+                    </li>
+                    <li>
+                    	<h4>日日上新</h4>
+                        <div>
+                        	<a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                            <a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                            <a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                            <a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                        </div>
+                    </li>
+                    <li>
+                    	<h4>日日上新</h4>
+                        <div>
+                        	<a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                            <a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                            <a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                            <a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                        </div>
+                    </li>
+                    <li>
+                    	<h4>日日上新</h4>
+                        <div>
+                        	<a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                            <a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                            <a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                            <a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                        </div>
+                    </li>
+                    <li>
+                    	<h4>日日上新</h4>
+                        <div>
+                        	<a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                            <a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                            <a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                            <a href="">日韩潮品</a>
+                            <a href="">欧美大牌</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="banner fl">
+            	<div class="banner-t ">
+               		<a href="">
+                		<img src="banner.jpg"/>
+                    </a>
+                    <div class="prve"></div>
+                    <div class="next"></div>
+                    <div class="btn clearFix">
+                    		<span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            
+                    </div>
+                </div>
+                <div class="banner-b clearFix">
+                	<a class="fl" href="">
+                    	<img src="meixue.jpg"/>
+                    </a>
+                    <a class="fl" href="">
+                    	<img src="meixue.jpg"/>
+                    </a>
+                    <a class="fl" href="">
+                    	<img src="meixue.jpg"/>
+                    </a>
+                    <a class="fl" href="">
+                    	<img src="meixue.jpg"/>
+                    </a>
+                    <a class="fl" href="">
+                    	<img src="meixue.jpg"/>
+                    </a>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!--picture nav-->
+	<div class="wrapper clearFix">
+    	<div class="line-t">
+            <h1 class="fl">疯狂星期五
+                <span>正确流行 新款大促</span>
+            </h1>
+            <div class="past fr fl">往期回顾
+ 
+            </div>
+        </div>
+    </div>
+    
+<!--picture-->
+	<div class="wrapper clearFix">
+
+  	  <div class="picture clearFix fl ">
+            <img class="big-p fl" src="meinv.jpg"/>
+            <div class="picture-r fl clearFix">
+                <ul class="fr">
+                    <li >
+                        <img src="meixue.jpg"/>
+                    </li>
+                    <li >
+                        <img src="meixue.jpg"/>
+                    </li>
+                    <li>
+                        <img src="meixue.jpg"/>
+                    </li>
+                   
+                </ul>
+            </div>
+          </div>
+    <div class="picture clearFix fl ">
+            <img class="big-p fl" src="meinv.jpg"/>
+            <div class="picture-r fl clearFix">
+                <ul class="fr">
+                    <li >
+                        <img src="meixue.jpg"/>
+                    </li>
+                    <li >
+                        <img src="meixue.jpg"/>
+                    </li>
+                    <li>
+                        <img src="meixue.jpg"/>
+                    </li>
+                   
+                </ul>
+            </div>
+          </div>
+   	 <div class="picture clearFix fl ">
+            <img class="big-p fl" src="meinv.jpg"/>
+            <div class="picture-r fl clearFix">
+                <ul class="fr">
+                    <li >
+                        <img src="meixue.jpg"/>
+                    </li>
+                    <li >
+                        <img src="meixue.jpg"/>
+                    </li>
+                    <li>
+                        <img src="meixue.jpg"/>
+                    </li>
+                   
+                </ul>
+            </div>
+          </div>
+
+</div>
+
+<!--picture nav-->
+	<div class="wrapper clearFix">
+    	<div class="line-t">
+            <h1 class="fl">疯狂星期五
+                <span>正确流行 新款大促</span>
+            </h1>
+            
+        </div>
+    </div>
+    
+<!--smart-picture-->
+	<div class="wrapper clearFix">
+    <div class="smart-box fl">
+        	<img src="smart-p.jpg"/>
+            <div class="clearFix">
+                <p class="money">$110.00
+                    <span class="fr">@2355</span>
+                </p>
+
+            	<p class="word">秋冬马卡龙外套</p>
+              </div>
+        </div>
+    <div class="smart-box fl">
+        	<img src="smart-p.jpg"/>
+            <div class="clearFix">
+                <p class="money">$110.00
+                    <span class="fr">@2355</span>
+                </p>
+
+            	<p class="word">秋冬马卡龙外套</p>
+              </div>
+        </div>
+    <div class="smart-box fl">
+        	<img src="smart-p.jpg"/>
+            <div class="clearFix">
+                <p class="money">$110.00
+                    <span class="fr">@2355</span>
+                </p>
+
+            	<p class="word">秋冬马卡龙外套</p>
+              </div>
+        </div>
+    <div class="smart-box fl">
+        	<img src="smart-p.jpg"/>
+            <div class="clearFix">
+                <p class="money">$110.00
+                    <span class="fr">@2355</span>
+                </p>
+
+            	<p class="word">秋冬马卡龙外套</p>
+              </div>
+        </div>
+   	 <div class="smart-box fl">
+        	<img src="smart-p.jpg"/>
+            <div class="clearFix">
+                <p class="money">$110.00
+                    <span class="fr">@2355</span>
+                </p>
+
+            	<p class="word">秋冬马卡龙外套</p>
+              </div>
+        </div>
+    </div>
+   <div class="wrapper clearFix">
+    <div class="smart-box fl">
+        	<img src="smart-p.jpg"/>
+            <div class="clearFix">
+                <p class="money">$110.00
+                    <span class="fr">@2355</span>
+                </p>
+
+            	<p class="word">秋冬马卡龙外套</p>
+              </div>
+        </div>
+    <div class="smart-box fl">
+        	<img src="smart-p.jpg"/>
+            <div class="clearFix">
+                <p class="money">$110.00
+                    <span class="fr">@2355</span>
+                </p>
+
+            	<p class="word">秋冬马卡龙外套</p>
+              </div>
+        </div>
+    <div class="smart-box fl">
+        	<img src="smart-p.jpg"/>
+            <div class="clearFix">
+                <p class="money">$110.00
+                    <span class="fr">@2355</span>
+                </p>
+
+            	<p class="word">秋冬马卡龙外套</p>
+              </div>
+        </div>
+    <div class="smart-box fl">
+        	<img src="smart-p.jpg"/>
+            <div class="clearFix">
+                <p class="money">$110.00
+                    <span class="fr">@2355</span>
+                </p>
+
+            	<p class="word">秋冬马卡龙外套</p>
+              </div>
+        </div>
+   	 <div class="smart-box fl">
+        	<img src="smart-p.jpg"/>
+            <div class="clearFix">
+                <p class="money">$110.00
+                    <span class="fr">@2355</span>
+                </p>
+
+            	<p class="word">秋冬马卡龙外套</p>
+              </div>
+        </div>
+    </div>
+    
+<!--picture nav-->
+	<div class="wrapper clearFix">
+    	<div class="line-t">
+            <h1 class="fl">时尚美妆
+                <span>优选精品 新款大促</span>
+            </h1>
+            <div class="past fr fl">更多美妆
+ 
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="wrapper clearFix">
+		<div class="litte fl">
+        	<img src="meizhuang-1.png"/>
+            <div >$6.02
+            	<p class="fr">原价10.20</p>
+            </div>
+            <span>夜间酵母</span>
+            <i>变瘦 变美 变高 变白变瘦 变美 变高 变白变瘦 变美 变高 变白</i>
+            <b>变瘦 变美 变高 变白</b>
+       	</div>
+        <div class="litte fl">
+        	<img src="meizhuang-1.png"/>
+            <div >$6.02
+            	<p class="fr">原价10.20</p>
+            </div>
+            <span>夜间酵母</span>
+            <i>变瘦 变美 变高 变白变瘦 变美 变高 变白变瘦 变美 变高 变白</i>
+            <b>变瘦 变美 变高 变白</b>
+       	</div>
+        <div class="litte fl">
+        	<img src="meizhuang-1.png"/>
+            <div >$6.02
+            	<p class="fr">原价10.20</p>
+            </div>
+            <span>夜间酵母</span>
+            <i>变瘦 变美 变高 变白变瘦 变美 变高 变白变瘦 变美 变高 变白</i>
+            <b>变瘦 变美 变高 变白</b>
+       	</div>
+    </div>
+    
+<!--picture nav-->
+	<div class="wrapper clearFix">
+    	<div class="line-t">
+            <h1 class="fl">时尚美妆
+                <span>优选精品 新款大促</span>
+            </h1>
+            <div class="past fr fl">更多美妆
+ 
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="another-nav">
+    	<div class="wrapper">
+        	<ul class="clearFix">
+            	<li>
+                	<a class="active" href="">魅力包包</a>
+                </li>
+                
+                <li>
+                	<a href="">魅力包包</a>
+                </li>
+                <li>
+                	<a href="">魅力包包</a>
+                </li>
+                <li>
+                	<a href="">魅力包包</a>
+                </li>
+                <li>
+                	<a href="">魅力包包</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="wrapper clearFix">
+		<div class="litte fl">
+        	<img src="meizhuang-1.png"/>
+            <div >$6.02
+            	<p class="fr">原价10.20</p>
+            </div>
+            <span>夜间酵母</span>
+            <i>变瘦 变美 变高 变白变瘦 变美 变高 变白变瘦 变美 变高 变白</i>
+            <b>变瘦 变美 变高 变白</b>
+       	</div>
+        <div class="litte fl">
+        	<img src="meizhuang-1.png"/>
+            <div >$6.02
+            	<p class="fr">原价10.20</p>
+            </div>
+            <span>夜间酵母</span>
+            <i>变瘦 变美 变高 变白变瘦 变美 变高 变白变瘦 变美 变高 变白</i>
+            <b>变瘦 变美 变高 变白</b>
+       	</div>
+        <div class="litte fl">
+        	<img src="meizhuang-1.png"/>
+            <div >$6.02
+            	<p class="fr">原价10.20</p>
+            </div>
+            <span>夜间酵母</span>
+            <i>变瘦 变美 变高 变白变瘦 变美 变高 变白变瘦 变美 变高 变白</i>
+            <b>变瘦 变美 变高 变白</b>
+       	</div>
+    </div>
+    
+ <!--picture nav-->
+	<div class="wrapper clearFix">
+    	<div class="line-t">
+            <h1 class="fl">疯狂星期五
+                <span>正确流行 新款大促</span>
+            </h1>
+            <div class="past fr fl">往期回顾
+ 
+            </div>
+        </div>
+    </div>
+    
+<!--picture-->
+	<div class="wrapper clearFix">
+
+  	  <div class="picture clearFix fl ">
+            <img class="big-p fl" src="meinv.jpg"/>
+            <div class="picture-r fl clearFix">
+                <ul class="fr">
+                    <li >
+                        <img src="meixue.jpg"/>
+                    </li>
+                    <li >
+                        <img src="meixue.jpg"/>
+                    </li>
+                    <li>
+                        <img src="meixue.jpg"/>
+                    </li>
+                   
+                </ul>
+            </div>
+          </div>
+    <div class="picture clearFix fl ">
+            <img class="big-p fl" src="meinv.jpg"/>
+            <div class="picture-r fl clearFix">
+                <ul class="fr">
+                    <li >
+                        <img src="meixue.jpg"/>
+                    </li>
+                    <li >
+                        <img src="meixue.jpg"/>
+                    </li>
+                    <li>
+                        <img src="meixue.jpg"/>
+                    </li>
+                   
+                </ul>
+            </div>
+          </div>
+   	 <div class="picture clearFix fl ">
+            <img class="big-p fl" src="meinv.jpg"/>
+            <div class="picture-r fl clearFix">
+                <ul class="fr">
+                    <li >
+                        <img src="meixue.jpg"/>
+                    </li>
+                    <li >
+                        <img src="meixue.jpg"/>
+                    </li>
+                    <li>
+                        <img src="meixue.jpg"/>
+                    </li>
+                   
+                </ul>
+            </div>
+          </div>
+
+</div>
+
+<!--footer-->
+	<div class="wrapper clearFix">
+    	<div class="footer">
+          <div class="one fl">
+                <img class="fl" src="phone1.png"/>
+                <div class="ont-word fl">
+                    <p>400-800-577</p>
+                    <p>美丽说客服热线</p>
+                    <p>周一-周日00：00-24:00</p>
+                </div>
+                <div class="two fl">
+                    <p class="h2">买家帮助</p>
+                    <p>新手指南</p>
+                    <p>服务保障</p>
+                    <p>帮助中心</p>
+                   
+                </div>
+                <div class="two fl">
+                    <p class="h2">买家帮助</p>
+                    <p>新手指南</p>
+                    <p>服务保障</p>
+                    <p>帮助中心</p>
+                   
+                </div>
+                <div class="two fl">
+                    <p class="h2">买家帮助</p>
+                    <p>新手指南</p>
+                    <p>服务保障</p>
+                    <p>帮助中心</p>
+                   
+                </div>
+                <div class="two fl">
+                    <p class="h2">买家帮助</p>
+                    <p>新手指南</p>
+                    <p>服务保障</p>
+                    <p>帮助中心</p>
+                   
+                </div>
+                <div class="two fl">
+                    <p class="h2">买家帮助</p>
+                    <p>新手指南</p>
+                    <p>服务保障</p>
+                    <p>帮助中心</p>
+                   
+                </div>
+               <div class="two fl">
+                 	<p class="h2">美丽说微信服务号</p>
+                    <img src="erweima1.png"/>
+                </div>
+                
+           <span class="footer-c clearFix">
+            	<ul class="fl">
+                	<li class="fl">
+                    	<a href="">太平洋女性网</a>
+                    </li>
+                    <li class="fl">
+                    	<a href="">女性网</a>
+                    </li>
+                    <li class="fl">
+                    	<a href="">太平洋女性网</a>
+                    </li>
+                    <li class="fl">
+                    	<a href="">太平洋</a>
+                    </li>
+                    <li class="fl">
+                    	<a href="">太平洋女性网</a>
+                    </li>
+                    <li class="fl">
+                    	<a href="">女性网</a>
+                    </li>
+                    <li class="fl">
+                    	<a href="">太平洋</a>
+                    </li>
+                    <li class="fl">
+                    	<a href="">太平洋女性网</a>
+                    </li>
+                    <li class="fl">
+                    	<a href="">太平</a>
+                    </li>
+                    <li class="fl">
+                    	<a href="">太平洋女性网</a>
+                    </li>
+                </ul>
+            </span>
+            
+            <div class="footer-b">
+            	<p>文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍文字介绍</p>
+            </div>
+         </div>
+    </div>
+
+   
+  
+</body>
+</html>

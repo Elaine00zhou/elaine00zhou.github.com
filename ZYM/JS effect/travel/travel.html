@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>travel</title>
+<style>
+
+*{margin:0;padding:0;list-style:none;}
+body{ background:#CCC;}
+#ul1 img{width:480px;height:260px;}
+#ul1{ position:relative;width:480px; height:260px; background:#ccc; margin:100px auto;}
+#ul1 li{ position:absolute;left:0;top:0; opacity:0;
+	transform: perspective(800px) rotateY(0deg);
+	transition:1s all ease;
+}
+
+#ul1 li.l2{ opacity:0; transform: perspective(800px) translateX(-300px) rotateY(45deg); z-index:1;}
+#ul1 li.l1{ opacity:1; transform: perspective(800px) translateX(-200px) rotateY(45deg); z-index:3;}
+#ul1 li.cur{ opacity:1; z-index:5;}
+
+#ul1 li.r1{ opacity:1; transform: perspective(800px) translateX(200px) rotateY(-45deg); z-index:3;}
+#ul1 li.r2{ opacity:0; transform: perspective(800px) translateX(300px) rotateY(-45deg); z-index:1;}
+h3{text-align:center;}
+</style>
+
+</head>
+<script>
+window.onload = function(){
+	var oBtnPrev = document.getElementById("btn_prev");
+	var oBtnNext = document.getElementById("btn_next");
+	var oUl = document.getElementById("ul1");
+	var aLi = oUl.children;
+	var len = aLi.length;
+	
+	//存class
+	var aClass = [];
+	for(var i = 0; i < len; i++){
+		aClass.push(aLi[i].className);
+	}
+	
+	
+	var bReady = true;//准备好了 
+	oBtnNext.onclick = function(){
+		if(!bReady) return ;
+		bReady = false;
+		aClass.unshift(aClass.pop());
+	 	tab();
+	};
+	
+	oBtnPrev.onclick = function(){
+		if(!bReady) return ;
+		bReady = false;
+	 	aClass.push(aClass.shift());
+		tab();	
+	};
+	
+	function tab(){
+		for(var i = 0; i < len; i++){
+			aLi[i].className = aClass[i];
+		}
+		
+		var oCur = oUl.querySelector(".cur");
+		oCur.addEventListener("transitionend",function(){
+			bReady = true;
+		},false);	
+	}
+	
+ 
+};
+
+</script>
+<body>
+<input id="btn_prev" type="button" value="上一张"/>
+<input id="btn_next" type="button" value="下一张"/>
+<ul id="ul1">
+	<li class="l2"><img src="img1/1.jpg" /></li>
+	<li class="l1"><img src="img1/2.jpg" /></li>
+	<li class="cur"><img src="img1/3.jpg" /></li>
+	<li class="r1"><img src="img1/4.jpg" /></li>
+	<li class="r2"><img src="img1/5.jpg" /></li>
+	<li><img src="img1/6.jpg" /></li>
+	<li><img src="img1/7.jpg" /></li>
+	<li><img src="img1/8.jpg" /></li>
+	<li><img src="img1/9.jpg" /></li>
+	<li><img src="img1/10.jpg" /></li>
+	<li><img src="img1/11.jpg" /></li>
+
+</ul>
+<h3>做一面心意墙，记录你们去过的每一个地方！！</h3>
+</body>
+</html>

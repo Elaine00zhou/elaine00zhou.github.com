@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>瀑布流</title>
+<style>
+*{margin:0;padding:0;list-style:none;}
+#div1{position:absolute;left:10px;top:0;background:#ccc;overflow:hidden;width:930px;margin:0 auto;}
+#div1 ul{float:left;width:300px;margin-right:10px;background:#666}
+#div1 ul li{/*height:300px;background:#333*/margin-bottom:10px;}
+</style>
+<script>
+window.onload=function(){
+	var oDiv=document.getElementById('div1');
+	var aUl=oDiv.children;
+	//1.	createLi
+	function createLi(){
+		var oLi=document.createElement('li');
+		var c=parseInt(0+Math.random()*(256-0));
+		var a=Math.random();
+		oLi.style.height=parseInt(50+Math.random()*(500-50))+'px';
+		oLi.style.background='rgba('+c+','+c+','+c+','+a+')';
+		return oLi
+	}
+	//先插入n个在页面里
+	function insertToUl(n){
+		for(var j=0;j<n;j++){
+			//aUl是伪数组,每个元素加到真数组里-->sort-->数组[0]==最短的
+			var arr=[];
+			for(var i=0;i<aUl.length;i++){
+				arr.push(aUl[i])
+			};
+			arr.sort(function(ul1,ul2){
+				return ul1.offsetHeight-ul2.offsetHeight;
+			})
+			
+			arr[0].appendChild(createLi());
+		}
+	}
+	insertToUl(20);
+	//判断滚动到底部--->insertToUl(10);
+	window.onscroll=function(){
+		var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+		var cHeight=document.documentElement.clientHeight;
+		var bodyH=document.body.scrollHeight;
+		if(bodyH<=scrollTop+cHeight){
+			insertToUl(10);
+		}
+	};
+};
+</script>
+</head>
+
+<body>
+<div id="div1">
+	<ul></ul>
+	<ul></ul>
+	<ul></ul>
+</div>
+</body>
+</html>

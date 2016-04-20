@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{padding:0;margin:0}
+a{text-decoration:none}
+li{list-style:none}
+textarea{resize:none}
+img,input,select,textarea{vertical-align:top}
+input,select,textarea{outline:none}
+.fl{float:left;display:inline}
+.fr{float:right;display:inline}
+.clearFix:after{content:"";display:block;clear:both;}
+.clearFix{zoom:1}
+body{font-size: 12px;font-family:"微软雅黑","SimSun","宋体";color:#000;}
+html{color:#000}
+
+
+
+
+

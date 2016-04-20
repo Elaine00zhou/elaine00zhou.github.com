@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+body{width:100%;background:#040809;}
+#header{position:relative;top:0;left:0;}
+#header .banner img{width:100%;height:950px}
+#header .banner .ban_c{width:700px;height:500px;position:absolute;
+		top:0;left:0;right:0;bottom:0;margin:auto;}
+#header .banner .opa{width:100%;height:950px;background:#000;opacity:0.5;position:absolute;top:0;left:0;}
+#header .nav{width:100%;height:60px;background:rgba(0,0,0,0.5); color:#fff;position:fixed;top:0;left:0;z-index:222}
+ #ul1{margin-left:700px;position:relative;width:808px;z-index:222}
+
+#ul1 li{font-size:14px;line-height:60px; position:relative;z-index:5;width:80px; height:60px;float:left;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif}
+#header .nav a{font-style:inherit;transition:all 0.4s ease 0s;color:#fff;font-weight:200}
+#ul1 li .active{border-bottom:2px solid #0FF;color:#0FF;padding-bottom:10px;}
+#header .nav ul li a:hover{border-bottom:2px solid #0FF;color:#0FF;padding-bottom:10px;}
+#header .h3-1{color:#fff;position:absolute;top:40px;left:110px;font-size:24px;font-family:"Courier New", Courier, monospace;}
+#header h1{color:#fff;position:absolute;top:60px;left:150px;font-size:96px;opacity:0.5}
+#header .bb{color:#fff;position:absolute;top:180px;left:50px;width:600px;height:1px;background:#fff;}
+#header .js{color:#fff;position:absolute;top:190px;left:220px;font-size:14px;font-style:italic;font-family:"MS Serif", "New York", serif}
+
+#header audio{position:absolute;bottom:0px;left:0;opacity:0.3;}
+#header #time{position:absolute;top:15px;left:60px;}
+#header #time img{width:15px;height:20px;}
+
+#showcase{width:100%}
+#showcase h4{color:#fff;font-size:24px;text-align:center;font-family:"Courier New", Courier, monospace;margin-top:120px;}
+#showcase .title{color:#fff;font-size:14px;text-align:center;margin-top:3px}
+// #showcase .title-b{width:30px;height:2px;background:#0ff;margin-top:8px;margin-left:660px;}
+#showcase .js{color:#fff;text-align:center;font-size:14px;font-style:italic;font-family:"MS Serif", "New York", serif;margin-bottom:80px;}
+#showcase .showbox  ul li{width:100px;height:100px;background:#b2b3b5;
+	margin:5px;position:relative;}
+#showcase .showbox  ul li img{width:100px;height:100px;transition:1s all ease-in;
+	position: relative;z-index:5;}
+#showcase .showbox  ul li img.on{transform:rotateX(720deg) scale(-3,3);
+	 border-radius:50%;z-index:888;}
+#showcase .showbox  #ul3{margin-left:110px;}
+#showcase .showbox  #ul3-r{margin-right:110px;}
+#showcase .showbox  #ul4{margin-left:220px;}
+#showcase .showbox  #ul4-r{margin-right:220px;}
+#showcase .showbox  #ul5{margin-left:440px;}
+#showcase .showbox  #ul5-r{margin-right:440px;}
+#showcase .showbox  h3{font-size:18px;color:#fff;margin-top:30px;margin-left:5px;text-shadow:2px 2px 8px  #000;}
+#showcase .showbox  p{font-size:12px;color:#fff;margin-top:10px;
+	position: absolute;bottom:0;left:0; width:100%;height:0;
+		background:rgba(0,0,0,0.5);opacity:0;}
+#showcase .showbox  p.on{animation:show_on 1s ease forwards;}
+#showcase .showbox  p.off{animation:show_off 1s ease forwards;}
+@keyframes show_on
+{
+	0%{height:0;opacity:0;}
+	100%{height:40px;opacity:1}
+}
+@keyframes show_off
+{
+	0%{height:40px;opacity:1;}
+	100%{height:0;opacity:0}
+}
+
+/*<!--#showcase .showbox ul li div {height:50px; width:100%; position:absolute; left:0; bottom:-50px; opacity:0; filter:alpha(opacity:0);}
+#showcase .showbox ul li div .bg {height:50px; border-top:1px solid white; width:100%; background:black; position:absolute; left:0; top:0; opacity:0.6; filter:alpha(opacity:60); z-index:1;}
+#showcase .showbox ul li div em {position:absolute; left:0; top:0; color:white; z-index:2;}
+#showcase .showbox ul li div h2 {padding:4px; font-family:'\65B0\5B8B\4F53', '\5B8B\4F53', Verdana;font-size:12px;}
+#showcase .showbox ul li div p {padding:4px; line-height:22px;font-size:12px;}
+*/-->
+#banner-me h4{color:#fff;font-size:24px;text-align:center;font-family:"Courier New", Courier, monospace;margin-top:100px;}
+#banner-me .title{color:#fff;font-size:14px;text-align:center;margin-top:3px}
+// #banner-me .title-b{width:30px;height:2px;background:#0ff;margin-top:8px;margin-left:660px;margin-bottom:60px;}
+#banner-me .border-banner{width:1100px;height:650px;border:10px solid #333;
+	margin:0 auto;margin:-top:100px;background:rgba(0,0,0,0.5);position:relative;}
+#banner-me .border-banner img{;width:1000px;height:550px;padding:50px}
+#banner-me .border-banner .frame{width:320px;height:250px;border:3px solid #fff;position:absolute;top:300px;left:620px;}
+#banner-me .border-banner .frame li{color:#fff;margin-left:130px;font-size:12px;margin-top:12px;font-family:Arial, Helvetica, sans-serif}
+#banner-me .border-banner .page{width:320px;height:250px;background:#fff;position:absolute;top:200px;left:420px;}
+#banner-me .border-banner .page h5{font-size:18px;color:#ccc;margin-left:10px;margin-top:20px;font-family:Arial, Helvetica, sans-serif}
+#banner-me .border-banner .page p{font-size:12px;color:#999;margin-left:10px;margin-top:5px;font-family:Verdana, Geneva, sans-serif}
+
+
+#contact h4{color:#fff;font-size:24px;text-align:center;font-family:"Courier New", Courier, monospace;margin-top:120px;}
+#contact .title{color:#fff;font-size:14px;text-align:center;margin-top:3px}
+// #contact .title-b{width:30px;height:2px;background:#0ff;margin-top:8px;margin-left:660px;}
+#contact .js{color:#fff;text-align:center;font-size:14px;font-style:italic;font-family:"MS Serif", "New York", serif;margin-bottom:60px;}
+#contact .bigbox{position:relative;width:100%;height:300px;background:rgba(0,0,0,0.5);	box-shadow:10px 20px 10px #040809;}
+#contact .contact-way{width:100%;height:300px;position:absolute;top:20px;left:0;}
+#contact .contact-way ul{width:900px;margin:0 auto;}
+#contact .contact-way ul li{width:100px;height:100px;margin-left:80px;}
+#contact .contact-way ul li:nth-child(1){margin-left:0;}
+#contact .contact-way ul img{width:50px;height:50px;border-radius:10px;
+	margin-left:25px;cursor: pointer;transition:1s all ease}
+#contact .contact-way ul li:hover img{transform:scale(-2,2) rotateX(360deg)}
+#contact .contact-way ul  p{color:#fff;font-weight:bold;text-align:center;margin-top:15px;}
+
+#contact .contact-way ul  h5{color:#fff;font-weight:bold;text-align:center;margin-bottom:15px;}
+#contact .contact-banner img{width:100%;height:150px;}
+#contact .bigbox .p2,.p3{text-align:center;color:#fff;}
+#contact .bigbox .p2{margin-top:80px;margin-bottom:5px;}

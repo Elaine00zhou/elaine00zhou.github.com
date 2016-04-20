@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* CSS Document */
+
+.header{height:70px;border-bottom:2px solid #22ac38;background:#fff;}
+h1{width:150px;height:45px;background:url(../imager/logo-1.png) no-repeat;margin-top:23px;text-indent:-9999px;}
+.search{margin:17px 0 13px 20px;}
+.search .txt{width:500px;height:40px;border:none;background:#eee;}
+.search .sub{width:38px;height:40px;background:url(../imager/search-1.png) no-repeat;margin-left:-38px;border:none;}
+.record{margin:25px 0 20px 0;}
+.record li{font-size:14px;margin-right:12px;padding-left:28px;height:28px;line-height:28px;position:relative;}
+.record .me{background:url(../imager/melogo-1.png) no-repeat;}
+.record .look{background:url(../imager/melogo-1.png) no-repeat;}
+.record .down{background:url(../imager/down-1.png) no-repeat;}
+.record div{width:300px;height:200px;border:1px solid #22ac38;position:absolute;top:30px;right:0;display:none;}
+.record li:hover div{display:block;}
+
+
+
+
+.nav{height:43px;line-height:43px;background:#fff;}
+.nav-l{font-size:16px;}
+.nav-l li{float:left;margin-left:25px;}
+.nav-r li{float:left;margin-left:25px;}
+.nav-l .star a{display:block;color:green;}
+
+
+
+.banner{height:455px;position:relative;border:none;}
+.banner ul{position:absolute;width:1920px;height:455px;left:50%;top:0;margin-left:-960px;}
+.banner li{display:none;}
+.banner .show{display:block;}
+
+.abt{width:1002px;margin:0 auto ;position:relative;top:280px}
+.abt h2{font-size:36px;color:#fff;margin-bottom:25px;}
+.abt p{font-size:16px;color:#fff;}
+.btn{width:1002px;}
+.btn a{width:97px;height:55px;margin-right:14px;position:relative;}
+.btn img{width:100%;height:100%;border:none;}
+.btn div{position:absolute;width:97px;height:55px;margin-right:14px;background:#000;opacity:0.5;top:0;left:0;}
+.btn .on div{position:absolute;width:91px;height:49px;margin-right:14px;background:none;opacity:0.5;top:0;left:0;border:3px solid #0C0;}
+
+
+
+.title h3{font-size:32px;margin-top:38px;margin-right:16px;}
+.title li{margin-left:14px;}
+.title a{display:block;height:20px;margin-top:50px;}
+.title .on a{color:green;}
+.title-r h3{font-size:22px;margin-top:45px;}
+
+.picture-l {width:746px;}
+.picture-l-l {width:376px;height:288px;background:#fff;position:relative;margin-top:20px;}
+.picture-l-l  img{width:376px;height:254px;border:none;}
+.picture-l-l div{position:absolute;width:376px;height:22px;background:#000;opacity:0.5;top:230px;left:0;color:#fff;line-height:22px;}
+.picture-l-l  p{height:24px;line-height:24px;color:#333;}
+.picture-l  ul{width:370px;float:left;}
+.picture-l-r li{width:180px;height:138px;position:relative;margin-top:20px;margin-left:5px;}
+.picture-l-r img{width:180px;height:100px;border:none;}
+.picture-l-r div{position:absolute;width:180px;height:22px;background:#000;opacity:0.5;top:78px;left:0;color:#fff;line-height:22px;}
+.picture-l-r  p{height:24px;line-height:24px;color:#333;background:#fff;}
+.picture-r{width:240px;margin-left:15px;position:relative;margin-top:20px;}
+.picture-r img{width:240px;height:120px;margin-bottom:13px;border:none;}
+.picture-r div{position:absolute;width:240px;height:22px;background:#000;opacity:0.5;top:98px;left:0;color:#fff;line-height:22px;}
+.picture-r p{line-height:30px;color:#333;margin-left:8px;background:#fff}
+
+.tv{width:746px;}
+.tv li{width:180px;height:310px;margin-right:5px;margin-top:20px;position:relative;}
+.tv img{width:180px;height:245px;border:none;}
+.tv div{position:absolute;width:170px;height:22px;background:#000;opacity:0.5;top:223px;left:0;color:#fff;line-height:22px;padding-left:10px;}
+.tv div span{font-size:16px;color:red;font-weight:bold;padding-left:48px;}
+.tv p{margin-top:15px;margin-bottom:10px;}
+.tv i{font-style:normal;color:#CCC;}
+.tv-r{width:240px;position:relative;margin-top:20px;}
+.tv-r img{width:240px;height:120px;border:none;}
+.tv-r div{position:absolute;width:240px;height:33px;background:url(../imager/banlv-1.png) no-repeat;background:#000;opacity:0.5;top:87px;left:0;color:#fff;line-height:33px;}
+.tv-r span{background:url(../imager/xiaoanniu-1.png) no-repeat ;margin-left:90px;padding-left:20px;color:#ccc;height:33px;line-height:33px;}
+.tv-r .bg{background:#eee;}
+.tv-r h4{font-size:24px;margin-top:26px;margin-bottom:18px;}
+.tv-r em{font-style:normal;line-height:30px;}
+
+
+
+
+
+.prevue{width:746px;}
+.prevue li{width:180px;height:134px;background:#fff;position:relative;margin-top:20px;margin-right:6px;}
+.prevue img{width:180px;height:100px;border:none;}
+.prevue span{position:absolute;width:83px;height:20px;background:url(../imager/yugao-logo-1.png) no-repeat;top:0;left:0;text-indent:-9999em;}
+.prevue div{position:absolute;width:180px;height:22px;background:#000;opacity:0.5;top:78px;left:0;color:#fff;line-height:22px;}
+.prevue p{line-height:30px;color:#333;margin-left:8px;background:#fff}
+.prevue-r{width:240px;position:relative;margin-top:20px;}
+.prevue-r img{width:240px;height:100px;border:none;}
+.prevue-r div{position:absolute;width:240px;height:22px;background:#000;opacity:0.5;top:78px;left:0;color:#fff;line-height:22px;}
+.prevue-r p{font-weight:bold;margin-top:22px;}
+
+
+.photo{width:620px;margin-top:20px;}
+.photo li{margin:1px;}
+.photo img{width:204px;height:204px;border:none}
+.photo-r {width:380px;margin-top:20px;}
+.photo-r img{width:375px;height:410px;margin-left:1px;border:none;}
+
+
+
+.footer{margin-top:3500px;margin-left:260px;}

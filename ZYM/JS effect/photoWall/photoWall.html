@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{background:#040809;}
+		*{margin:0;padding:0;list-style: none}
+		#div{width:900px;margin:50px auto;}
+		h3{color:#0ff;font-size:14px;margin-top:50px;font-style:italic;font-family:Georgia, "Times New Roman", Times, serif;font-size:24px;}
+		li{width:200px;height:200px;float:left;margin:30px; border-radius: 50%;
+			overflow: hidden;}
+		li img{width: 100%;height:100%}
+	</style>
+	<script src="move.js"></script>
+	<script>
+		window.onload=function()
+		{
+			var oDiv=document.getElementById('div');
+			var oUl=document.getElementById('ul');
+			var aLi=oUl.children;
+			var arr=[];
+			for (var i = 0; i < aLi.length; i++)
+			{
+				arr.push(
+					{
+						left:aLi[i].offsetLeft,
+						top:aLi[i].offsetTop
+					});
+				aLi[i].style.left=arr[i].left+'px';
+				aLi[i].style.top=arr[i].top+'px';
+			}
+			for (var i = 0; i < aLi.length; i++)
+			{
+				aLi[i].style.position='absolute';
+				aLi[i].style.margin=0;
+				aLi[i].index=i;
+				drag(aLi[i])
+			}
+			function drag(obj)
+			{	
+				var zIndex=1;
+				obj.onmousedown=function(ev)
+				{	
+					clearInterval(obj.timer) 
+					obj.style.zIndex=zIndex++;
+					var oEvt=ev||event;
+					var disX=oEvt.clientX-obj.offsetLeft;
+					var disY=oEvt.clientY-obj.offsetTop;
+					document.onmousemove=function(ev)
+					{
+						var oEvt=ev||event;
+						obj.style.left=oEvt.clientX-disX+'px';
+						obj.style.top=oEvt.clientY-disY+'px';
+
+						var nearObj=findNearest(obj);
+						
+						if (nearObj&&nearObj!=obj)
+						{
+							var n=obj.index;
+							var m=nearObj.index;
+							for (var j = 0; j < aLi.length; j++)
+							{
+								if (aLi[j].index>n&&aLi[j].index<=m)
+								{
+									aLi[j].index--;
+									move(aLi[j],arr[aLi[j].index])
+								}
+								else if(aLi[j].index<n&&aLi[j].index>=m)
+								{
+									aLi[j].index++;
+									move(aLi[j],arr[aLi[j].index])
+								}
+							}
+							obj.index=m;
+						}
+					};
+					document.onmouseup=function()
+					{	
+						move(obj,arr[obj.index])
+						document.onmousemove=document.onmouseup=null;
+						obj.releaseCapture&&obj.releaseCapture();
+					};
+					obj.setCapture&&obj.setCapture();
+					return false;
+				};
+			}
+			function collTest(obj1,obj2)
+			{
+				var l1=obj1.offsetLeft;
+				var t1=obj1.offsetTop;
+				var r1=obj1.offsetLeft+obj1.offsetWidth;
+				var b1=obj1.offsetTop+obj1.offsetHeight;
+				
+				var l2=arr[obj2.index].left;
+				var t2=arr[obj2.index].top;
+				var r2=arr[obj2.index].left+obj2.offsetWidth;
+				var b2=arr[obj2.index].top+obj2.offsetHeight;
+				if (l1>r2||t1>b2||r1<l2||b1<t2)
+				{
+					return false;
+				}
+				else
+				{
+					return true;
+				}
+			}
+			function findNearest(obj)
+			{
+				var minDis=999999999;
+				var minIndex=-1;
+				for (var i = 0; i < aLi.length; i++)
+				{
+					if (collTest(obj,aLi[i]))
+					{
+						var dis=getDis(obj,aLi[i]);
+						
+						if (dis<minDis)
+						{
+							minDis=dis;
+							minIndex=i;
+						}
+					}
+				}
+				if (minIndex==-1)
+				{
+					return null;
+				}
+				else
+				{
+					return aLi[minIndex];
+				}	
+			}
+			function getDis(obj1,obj2)
+			{
+				var a=arr[obj2.index].left-obj1.offsetLeft;
+				var b=arr[obj2.index].left-obj1.offsetTop;
+				return Math.sqrt(a*a+b*b)
+			}
+		};
+	</script>
+</head>
+<body>
+	<h3>Change photo location。。。</h3>
+	<div id="div">
+		<ul id="ul">
+			<li><img src="images/1.jpg" alt=""></li>
+			<li><img src="images/2.jpg" alt=""></li>
+			<li><img src="images/3.jpg" alt=""></li>			
+			<li><img src="images/4.jpg" alt=""></li>
+			<li><img src="images/5.jpg" alt=""></li>
+			<li><img src="images/6.jpg" alt=""></li>
+			<li><img src="images/7.jpg" alt=""></li>
+			<li><img src="images/8.jpg" alt=""></li>
+			<li><img src="images/9.jpg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>

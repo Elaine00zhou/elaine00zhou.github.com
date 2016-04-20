@@ -1,0 +1,566 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>liveShow</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+<div id="playerBox">
+	<div id="header"><img src="images/header.png" /></div>
+    <div id="mainPlayer">
+    	<div id="side">
+        	<!--左侧用户相关信息-->
+        	<div class="user_serach">
+            	<div class="serach">
+                	<input type="text" class="inser" />
+                    <input type="button" class="inbtn pointer" />
+                </div>
+                <div class="user">
+                	<ul class="userTitle">
+                    	<li class="active"><a href="###">傲视影音</a></li>
+                        <li><a href="###">我的播放</a></li>
+                        <li><a href="###">直播</a></li>
+                        <li><a href="###">游戏</a></li>
+                        <li class="none"><a href="###">用户</a></li>
+                   	</ul>
+                    <div class="userCon">
+                    	<div class="userFace"><img src="images/face.png" /></div>
+                        <div class="userMsg">
+                        	<h3>strive_chen<a href="###" class="doudou"></a></h3>
+                            <p class="user_level">
+                            	<span class="padding_none"><img src="images/level.png"/></span>
+                                <span class="user_levelSun">(0)</span>
+                                <span class="user_levelYue">(1)</span>
+                                <span class="user_levelXing">(2)</span>
+                            </p>
+                            <p class="user_help">
+                            	<span>我的硬币:<a href="###" class="user_help">1000</a></span>
+                                <span><a href="###">我要兑换</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<!--左侧电影信息-->
+            <div class="movieBox">
+            	<div class="rollBox" id="rollBox">
+                	<div class="rollBar"></div>
+                    <div class="rollBarUp"></div>
+                    <div class="rollBarDown"></div>
+                </div>
+				
+                <div class="movieBox_msg">
+                	<div class="new_games">
+                    	<h3><span>+</span>今日有新游戏</h3>
+                    </div>
+                    <div class="liveShowListBox">
+                    	<ul>
+                        	<li><img src="images/liveshow/01.png" /><a href="###">四川卫视</a></li>
+                            <li><img src="images/liveshow/02.png" /><a href="###">深圳卫视</a></li>
+                            <li><img src="images/liveshow/03.png" /><a href="###">陕西卫视</a></li>
+                            <li><img src="images/liveshow/04.png" /><a href="###">无锡生活</a></li>
+                            <li><img src="images/liveshow/05.png" /><a href="###">南京综合</a></li>
+                            <li><img src="images/liveshow/06.png" /><a href="###">上视新娱乐</a></li>
+                            <li><img src="images/liveshow/07.png" /><a href="###">内蒙古卫视</a></li>
+                            <li><img src="images/liveshow/02.png" /><a href="###">深圳卫视</a></li>
+                            <li><img src="images/liveshow/01.png" /><a href="###">四川卫视</a></li>
+                            <li><img src="images/liveshow/02.png" /><a href="###">深圳卫视</a></li>
+                            <li><img src="images/liveshow/01.png" /><a href="###">四川卫视</a></li>
+                            <li><img src="images/liveshow/02.png" /><a href="###">深圳卫视</a></li>
+                            <li><img src="images/liveshow/01.png" /><a href="###">四川卫视</a></li>
+                            <li><img src="images/liveshow/02.png" /><a href="###">深圳卫视</a></li>
+                            <li><img src="images/liveshow/01.png" /><a href="###">四川卫视</a></li>
+                            <li><img src="images/liveshow/02.png" /><a href="###">深圳卫视</a></li>
+                            <li><img src="images/liveshow/01.png" /><a href="###">四川卫视</a></li>
+                            <li><img src="images/liveshow/02.png" /><a href="###">深圳卫视</a></li>
+                            <li><img src="images/liveshow/01.png" /><a href="###">四川卫视</a></li>
+                            <li><img src="images/liveshow/02.png" /><a href="###">深圳卫视</a></li>
+                            <li><img src="images/liveshow/01.png" /><a href="###">四川卫视</a></li>
+                            <li><img src="images/liveshow/02.png" /><a href="###">深圳卫视</a></li>
+                        </ul>
+                    </div>
+				</div>
+            </div>
+        </div>
+        <div id="playerContent">
+        	<div class="rollBox" id="rollBox2">
+                <div class="rollBar"></div>
+                <div class="rollBarUp"></div>
+                <div class="rollBarDown"></div>
+            </div>
+           	<div class="content_main">
+            	<!---顶部信息--->
+                <div class="con_header">
+                    <div class="help_oper">
+                        <span class="back">back</span><span class="refresh">refresh</span>
+                    </div>
+					<div class="con_nav">
+                    	<ul>
+                        	<li class="on"><a href="###">首页</a></li>
+                            <li><a href="###">电影</a></li>
+                            <li><a href="###">电视剧</a></li>
+                            <li><a href="###">动漫</a></li>
+                            <li><a href="###">综艺</a></li>
+                            <li><a href="###">音乐</a></li>
+                            <li><a href="###">卫视直播</a></li>
+                            <li><a href="###">影院大片</a></li>
+                        </ul>
+                    </div>
+                    <div class="serBox">
+                        <input class="inSer" type="text">
+                        <input class="btnSer" type="button">
+                    </div>
+                </div>
+                <div id="scroll_content">
+                    
+                    <!---焦点图--->
+                    <div class="focusBox">
+                        <div class="fi_movie" id="playerIndexFocus">
+                            <div class="fi_ct">
+                                <div class="fi_loading" style="display:none;">
+                                    <img src="images/icons/loading_black.gif" />
+                                </div>
+                                <ul class="fi_content">
+                                    <li style="opacity:1; filter:alpha(opacity:100); display:block;">
+                                        <a href="###"><img src="images/1.jpg" /></a>
+                                        <div class="note_bg"></div>
+                                        <p class="note"><a href="###">箭在弦上（第41集大结局）</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="###"><img src="images/2.jpg" /></a>
+                                        <div class="note_bg"></div>
+                                        <p class="note"><a href="###">X女特工（第41集大结局）</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="###"><img src="images/3.jpg" /></a>
+                                        <div class="note_bg"></div>
+                                        <p class="note"><a href="###">X女特工（第41集大结局）</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="###"><img src="images/4.jpg" /></a>
+                                        <div class="note_bg"></div>
+                                        <p class="note"><a href="###">X女特工（第41集大结局）</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="###"><img src="images/5.jpg" /></a>
+                                        <div class="note_bg"></div>
+                                        <p class="note"><a href="###">X女特工（第41集大结局）</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="###"><img src="images/6.jpg" /></a>
+                                        <div class="note_bg"></div>
+                                        <p class="note"><a href="###">X女特工（第41集大结局）</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="###"><img src="images/7.jpg" /></a>
+                                        <div class="note_bg"></div>
+                                        <p class="note"><a href="###">X女特工（第41集大结局）</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="###"><img src="images/8.jpg" /></a>
+                                        <div class="note_bg"></div>
+                                        <p class="note"><a href="###">X女特工（第41集大结局）</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="###"><img src="images/9.jpg" /></a>
+                                        <div class="note_bg"></div>
+                                        <p class="note"><a href="###">X女特工（第41集大结局）</a></p>
+                                    </li>
+                                    <li>
+                                        <a href="###"><img src="images/10.jpg" /></a>
+                                        <div class="note_bg"></div>
+                                        <p class="note"><a href="###">X女特工（第41集大结局）</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="fi_tab">
+                                <ul>
+                                    <li><a href="###"><img src="images/small_01.jpg" /></a></li>
+                                    <li><a href="###"><img src="images/small_02.jpg" /></a></li>
+                                    <li><a href="###"><img src="images/small_03.jpg" /></a></li>
+                                    <li><a href="###"><img src="images/small_01.jpg" /></a></li>
+                                    <li><a href="###"><img src="images/small_02.jpg" /></a></li>
+                                    <li><a href="###"><img src="images/small_03.jpg" /></a></li>
+                                    <li><a href="###"><img src="images/small_01.jpg" /></a></li>
+                                    <li><a href="###"><img src="images/small_02.jpg" /></a></li>
+                                    <li><a href="###"><img src="images/small_03.jpg" /></a></li>
+                                    <li><a href="###"><img src="images/small_01.jpg" /></a></li>
+                                </ul>
+                                <div class="fi_pointer"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--今日热点-->
+                    <div class="day_hot">
+                        <h3>今日热点</h3>
+                        <ul class="playerMaskVideo_js">
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg.jpg" />
+                                    <span class="maskVideo"></span>
+                                </a>
+                                <strong>扬州发现隋炀帝真正陵寝</strong>
+                            </li>
+                            
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg.jpg" />
+                                    <span class="maskVideo"></span>
+                                </a>
+                                <strong>sdfsdf扬州发现隋炀帝真正陵寝sdfsdfd</strong>
+                            </li>
+                            
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg.jpg" />
+                                    <span class="maskVideo"></span>
+                                </a>
+                                <strong>扬州发现隋炀帝真正陵寝</strong>
+                            </li>
+                            
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg.jpg" />
+                                    <span class="maskVideo"></span>
+                                </a>
+                                <strong>扬州发现隋炀帝真正陵寝</strong>
+                            </li>
+                            
+                            <li class="mr0">
+                                <a href="###">
+                                    <img src="images/av_eg.jpg" />
+                                    <span class="maskVideo"></span>
+                                </a>
+                                <strong>扬州发现隋炀帝真正陵寝</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--电影-->
+                    <div class="movie_list">
+                        <div class="movie_list_title">
+                            <span class="menu">
+                                <a href="###">华语</a> |
+                                <a href="###">好莱坞</a> |
+                                <a href="###">欧洲</a> |
+                                <a href="###">日本</a> |
+                                <a href="###">韩国</a> |
+                                <a href="###">更多&gt;&gt;</a>
+                            </span>
+                            <h3>电影</h3>
+                        </div>
+                        <ul class="movie_con playerMaskVideo_js">
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg2.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="squre"></span>
+                                </a>
+                                <strong class="movieName">特殊交易</strong>
+                                <strong class="movieInfo">青涩少年情挑陪酒女郎</strong>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg2.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="squre"></span>
+                                </a>
+                                <strong class="movieName">特殊交易</strong>
+                                <strong class="movieInfo">青涩少年情挑陪酒女郎</strong>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg2.jpg" />
+                                    <span class="maskVideo"></span>
+                                </a>
+                                <strong class="movieName">特殊交易</strong>
+                                <strong class="movieInfo">青涩少年情挑陪酒女郎</strong>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg2.jpg" />
+                                    <span class="maskVideo"></span>
+                                </a>
+                                <strong class="movieName">特殊交易</strong>
+                                <strong class="movieInfo">青涩少年情挑陪酒女郎</strong>
+                            </li>
+                            <li class="mr0">
+                                <a href="###">
+                                    <img src="images/av_eg2.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="squre"></span>
+                                </a>
+                                <strong class="movieName">特殊交易</strong>
+                                <strong class="movieInfo">青涩少年情挑陪酒女郎</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--电视剧--->
+                    <div class="tv_list">
+                        <div class="tv_list_title">
+                            <span class="menu">
+                                <a href="###">内地</a> |
+                                <a href="###">美剧</a> |
+                                <a href="###">港剧</a> |
+                                <a href="###">台剧</a> |
+                                <a href="###">韩剧</a> |
+                                <a href="###">英剧</a> |
+                                <a href="###">泰剧</a> |
+                                <a href="###">更多&gt;&gt;</a>
+                            </span>
+                            <h3>电视剧</h3>
+                        </div>
+                        <ul class="tv_con playerMaskVideo_js">
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg3.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="squre"></span>
+                                    <span class="maskPng">13集全</span>
+                                </a>
+                                <strong class="movieName">特殊交易</strong>
+                                <strong class="movieInfo">青涩少年情挑陪酒女郎</strong>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg3.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="squre"></span>
+                                    <span class="maskPng">13集全</span>
+                                </a>
+                                <strong class="movieName">特殊交易</strong>
+                                <strong class="movieInfo">青涩少年情挑陪酒女郎</strong>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg3.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="maskPng">13集全</span>
+                                </a>
+                                <strong class="movieName">特殊交易</strong>
+                                <strong class="movieInfo">青涩少年情挑陪酒女郎</strong>
+                            </li>
+                            <li class="mr0">
+                                <a href="###">
+                                    <img src="images/av_eg3.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="maskPng">13集全</span>
+                                </a>
+                                <strong class="movieName">特殊交易</strong>
+                                <strong class="movieInfo">青涩少年情挑陪酒女郎</strong>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg3.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="squre"></span>
+                                    <span class="maskPng">13集全</span>
+                                </a>
+                                <strong class="movieName">特殊交易</strong>
+                                <strong class="movieInfo">青涩少年情挑陪酒女郎</strong>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg3.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="squre"></span>
+                                    <span class="maskPng">13集全</span>
+                                </a>
+                                <strong class="movieName">特殊交易</strong>
+                                <strong class="movieInfo">青涩少年情挑陪酒女郎</strong>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg3.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="maskPng">13集全</span>
+                                </a>
+                                <strong class="movieName">特殊交易</strong>
+                                <strong class="movieInfo">青涩少年情挑陪酒女郎</strong>
+                            </li>
+                            <li class="mr0">
+                                <a href="###">
+                                    <img src="images/av_eg3.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="maskPng">13集全</span>
+                                </a>
+                                <strong class="movieName">特殊交易</strong>
+                                <strong class="movieInfo">青涩少年情挑陪酒女郎</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ad2"><img src="images/ad2.png" /></div>
+                    <!--综艺--->
+                    <div class="tv_list">
+                        <div class="tv_list_title">
+                            <span class="menu">
+                                <a href="###">内地</a> |
+                                <a href="###">港台</a> |
+                                <a href="###">欧美</a> |
+                                <a href="###">更多&gt;&gt;</a>
+                            </span>
+                            <h3>综艺</h3>
+                        </div>
+                        <ul class="tv_con playerMaskVideo_js">
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg4.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="squre"></span>
+                                    <span class="maskPng">13集全</span>
+                                </a>
+                                <strong class="movieName">总决赛羽泉爆冷夺冠</strong>
+                                <strong class="movieInfo">栏目:我是歌手</strong>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg4.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="squre"></span>
+                                    <span class="maskPng">13集全</span>
+                                </a>
+                                <strong class="movieName">总决赛羽泉爆冷夺冠</strong>
+                                <strong class="movieInfo">栏目:我是歌手</strong>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg4.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="maskPng">13集全</span>
+                                </a>
+                                <strong class="movieName">总决赛羽泉爆冷夺冠</strong>
+                                <strong class="movieInfo">栏目:我是歌手</strong>
+                            </li>
+                            <li class="mr0">
+                                <a href="###">
+                                    <img src="images/av_eg4.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="maskPng">13集全</span>
+                                </a>
+                                <strong class="movieName">总决赛羽泉爆冷夺冠</strong>
+                                <strong class="movieInfo">栏目:我是歌手</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--动漫--->
+                    <div class="tv_list">
+                        <div class="tv_list_title">
+                            <span class="menu">
+                                <a href="###">搞笑</a> |
+                                <a href="###">剧情</a> |
+                                <a href="###">冒险</a> |
+                                <a href="###">魔幻</a> |
+                                <a href="###">励志</a> |
+                                <a href="###">真人</a> |
+                                <a href="###">更多&gt;&gt;</a>
+                            </span>
+                            <h3>动漫</h3>
+                        </div>
+                        <ul class="tv_con playerMaskVideo_js">
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg5.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="squre"></span>
+                                    <span class="maskPng">86分10秒</span>
+                                </a>
+                                <strong class="movieName gray">十万个冷笑话</strong>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg5.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="squre"></span>
+                                    <span class="maskPng">86分10秒</span>
+                                </a>
+                                <strong class="movieName gray">总决赛羽泉爆冷夺冠</strong>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg5.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="maskPng">13集全</span>
+                                </a>
+                                <strong class="movieName gray">总决赛羽泉爆冷夺冠</strong>
+                            </li>
+                            <li class="mr0">
+                                <a href="###">
+                                    <img src="images/av_eg5.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="maskPng">13集全</span>
+                                </a>
+                                <strong class="movieName gray">总决赛羽泉爆冷夺冠</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--原创 · 微栏目--->
+                    <div class="tv_list">
+                        <div class="tv_list_title">
+                            <span class="menu">
+                                <a href="###">更多&gt;&gt;</a>
+                            </span>
+                            <h3>原创 · 微栏目</h3>
+                        </div>
+                        <ul class="tv_con playerMaskVideo_js">
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg6.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="squre"></span>
+                                    <span class="maskPng">大鹏嘚吧嘚</span>
+                                </a>
+                                <strong class="movieName gray">十万个冷笑话</strong>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg6.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="squre"></span>
+                                    <span class="maskPng">大鹏嘚吧嘚</span>
+                                </a>
+                                <strong class="movieName gray">总决赛羽泉爆冷夺冠</strong>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <img src="images/av_eg6.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="maskPng">大鹏嘚吧嘚</span>
+                                </a>
+                                <strong class="movieName gray">总决赛羽泉爆冷夺冠</strong>
+                            </li>
+                            <li class="mr0">
+                                <a href="###">
+                                    <img src="images/av_eg6.jpg" />
+                                    <span class="maskVideo"></span>
+                                    <span class="maskPng">大鹏嘚吧嘚</span>
+                                </a>
+                                <strong class="movieName gray">总决赛羽泉爆冷夺冠</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"><img src="images/footer.png" /></div>
+</div>
+<script src="js/sea.js"></script>
+<script>
+	seajs.use('focusImg.js',function(modFocus){
+		modFocus.focusImg('playerIndexFocus');	
+	});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
